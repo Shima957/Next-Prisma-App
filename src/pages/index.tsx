@@ -1,7 +1,13 @@
-import type { NextPage } from 'next';
+import { Container, Heading, Box } from '@chakra-ui/react';
 
-const Home: NextPage = () => {
-  return <div>Hello</div>;
+const Home = () => {
+  return (
+    <Container>
+      <Box>
+        <Heading>Hello</Heading>
+      </Box>
+    </Container>
+  );
 };
 
 export default Home;
