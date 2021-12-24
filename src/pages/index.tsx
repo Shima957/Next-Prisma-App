@@ -1,12 +1,10 @@
-import { Container, Heading, Box } from '@chakra-ui/react';
+import { Heading, Box } from '@chakra-ui/react';
 
 const Home = () => {
   return (
-    <Container>
-      <Box>
-        <Heading>Hello</Heading>
-      </Box>
-    </Container>
+    <Box>
+      <Heading size='lg'>Items</Heading>
+    </Box>
   );
 };
 
