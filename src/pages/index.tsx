@@ -4,7 +4,7 @@ import { Heading, Box } from '@chakra-ui/react';
 const Home = () => {
   return (
     <Box>
-      <Heading size='lg'>Items</Heading>
+      <Heading size='lg'>Todos</Heading>
       <Box mt={8}>
         <Todos />
       </Box>

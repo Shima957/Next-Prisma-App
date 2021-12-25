@@ -15,6 +15,8 @@ import {
 import axios from 'axios';
 import { VFC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useSetRecoilState } from 'recoil';
+import { addTodoFlag } from '@/atoms/todoAtoms';
 
 type Props = {
   isOpen: boolean;
@@ -33,10 +35,13 @@ const AddTodoModal: VFC<Props> = ({ isOpen, onClose }) => {
     formState: { isSubmitting },
   } = useForm<FormValue>();
 
+  const setAddFlag = useSetRecoilState(addTodoFlag);
+
   const onSubmit: SubmitHandler<FormValue> = async (data) => {
     const res = await axios.post('/api/submitTodo', data);
     if (res.status === 200) {
       onClose();
+      setAddFlag(true);
     }
   };
 
